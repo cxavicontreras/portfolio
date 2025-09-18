@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    background: linear-gradient(to bottom, blueviolet, blue); 
+    color: white;
+    font-family: "Cascadia Mono", monospace;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 45px; /* corregí "font-Size" a "font-size" (sensible a mayúsculas) */
+}
+
+.Introduccion {
+    padding: 20px;
+}
+
+.SeccionInferior {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+    gap: 40px;
+    flex-wrap: wrap; /* Para que se acomode mejor en pantallas pequeñas */
+}
+
+/* Secciones izquierda y derecha */
+.Tecnologías, .Educacion {
+    flex: 1;
+    min-width: 300px; /* Evita que se rompa el diseño en pantallas pequeñas */
+}
+
+.Tecnologías {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Contenedor de imágenes */
+.Tecnologias-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Imágenes de tecnologías */
+.tech-logo {
+    width: 100px;
+    height: auto;
+}
+
+/* Educación */
+.Educacion {
+    text-align: left;
+    margin: 20px;
+}
+
+.Educacion ul {
+    padding-left: 40px;
+}
+
+.Educacion li {
+    margin-bottom: 10px;
+}
+
+.Contacto{
+    margin:20px;
+}
+/* Responsive: apila columnas en pantallas pequeñas */
+@media (max-width: 768px) {
+    .SeccionInferior {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Tecnologías, .Educacion {
+        width: 100%;
+        text-align: center;
+    }
+
+    .Educacion {
+        text-align: center;
+    }
+}
